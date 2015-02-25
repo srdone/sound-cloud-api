@@ -9,7 +9,12 @@
 <body ng-app="sounder">
 
 <div ng-controller="MainController">
-  {{test}}
+
+  <form>
+    <input type="text" ng-model="searchText" placeholder="Search">
+    <button type="submit" ng-click="getUser()">Search SoundCloud</button>
+  </form>
+
 </div>
 
 

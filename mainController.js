@@ -1,5 +1,9 @@
 angular.module('sounder').controller('MainController', ['$scope', 'soundService', function ($scope, soundService) {
 
-  $scope.test = soundService.test;
+  $scope.getUser = function () {
+    soundService.getUser($scope.searchText).then(function (data) {
+      console.log(data);
+    });
+  };
 
 }]);
