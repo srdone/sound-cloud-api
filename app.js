@@ -1,1 +1,1 @@
-var app = angular.module('sounder', []);
+var app = angular.module('sounder', ['ngRoute']);

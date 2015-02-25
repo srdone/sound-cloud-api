@@ -1,0 +1,20 @@
+<div>
+
+  <form>
+    <input type="text" ng-model="searchText" placeholder="Search">
+    <button type="submit" ng-click="getUser()">Search SoundCloud</button>
+  </form>
+
+  <div class="row">
+    <div ng-repeat="song in userData">
+      <div class="col-md-1">
+        <img src="http://i.ytimg.com/vi/L5z2-Mx9TNE/hqdefault.jpg" ng-click="play(song.permalink_url)" ng-if="!song.artwork_url">
+        <img ng-src="{{song.artwork_url}}" ng-click="play(song.permalink_url)" ng-if="song.artwork_url">
+        <a ng-href="#/users/{{song.user.id}}">{{song.user.username}}</a>
+      </div>
+    </div>
+  </div>
+
+  <div ng-bind-html="player_html"></div>
+
+</div>
