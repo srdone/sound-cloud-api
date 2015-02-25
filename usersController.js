@@ -2,4 +2,6 @@ angular.module('sounder').controller('UsersController', ['$scope', 'userDetail',
 
   $scope.userDetail = userDetail;
 
+  console.log(userDetail);
+
 }]);
