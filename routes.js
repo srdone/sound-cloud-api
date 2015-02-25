@@ -11,8 +11,8 @@ app.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'users.view.html',
       controller: 'UsersController',
       resolve: {
-        userDetail: ['$routeParams', 'soundService', function ($routeParams, soundService) {
-          return soundService.getUserDetails($routeParams.userId);
+        userDetail: ['$route', 'soundService', function ($route, soundService) {
+          return soundService.getUserDetails($route.current.params.userId);
         }]
       }
     });
